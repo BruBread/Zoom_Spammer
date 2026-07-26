@@ -1,4 +1,4 @@
-# Zoom_Spammer
+# zoom-in-container.bat
 
 A Windows batch script that opens a Zoom meeting link in **multiple, visually distinct Firefox containers** at once — one browser tab per "identity," each in its own isolated container. Useful for testing multi-participant scenarios, joining the same meeting from several accounts, or keeping Zoom sessions completely separate from your regular browsing profile.
 
@@ -63,7 +63,3 @@ Opening container TeamStandup-20260726-134512-3 (green/dollar) via browser join.
 - **Unsigned link warning**: because this script sends unsigned links, the extension shows a one-time "are you sure?" confirmation popup before opening each one. This is expected clickjacking protection, not a bug.
 - **Containers persist**: every run creates new containers that remain in Firefox's container list afterward — Firefox doesn't clean these up automatically. Periodically clear out old ones via Firefox's **Manage Containers** settings.
 - If your link doesn't match the standard `/j/...` pattern, the script will note this and open the link as-is rather than failing.
-
-## License
-
-Add your preferred license here (e.g., MIT).
