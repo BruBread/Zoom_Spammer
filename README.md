@@ -1,4 +1,4 @@
-# zoom-in-container.bat
+# Zoom_Spammer
 
 A Windows batch script that opens a Zoom meeting link in **multiple, visually distinct Firefox containers** at once — one browser tab per "identity," each in its own isolated container. Useful for testing multi-participant scenarios, joining the same meeting from several accounts, or keeping Zoom sessions completely separate from your regular browsing profile.
 
