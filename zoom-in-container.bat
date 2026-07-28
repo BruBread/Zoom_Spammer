@@ -123,7 +123,7 @@ set "ENCODED_URL="
 for /f "usebackq delims=" %%E in (`powershell -NoProfile -Command "[uri]::EscapeDataString('%WEB_LINK%')"`) do set "ENCODED_URL=%%E"
 
 if "%ENCODED_URL%"=="" (
-    call :fail "PowerShell didn't return anything while encoding the link. Try running this manually to see the actual error: powershell -Command \"[uri]::EscapeDataString('%WEB_LINK%')\""
+    call :fail "PowerShell didn't return anything while encoding the link. Open a Command Prompt and run powershell by itself to confirm it starts correctly, then try this script again."
 )
 
 :: --- Timestamp shared across this run's containers ---
@@ -131,7 +131,7 @@ set "TIMESTAMP="
 for /f "usebackq delims=" %%T in (`powershell -NoProfile -Command "Get-Date -Format 'yyyyMMdd-HHmmss'"`) do set "TIMESTAMP=%%T"
 
 if "%TIMESTAMP%"=="" (
-    call :fail "PowerShell didn't return a timestamp. Try running this manually to see the actual error: powershell -Command \"Get-Date -Format 'yyyyMMdd-HHmmss'\""
+    call :fail "PowerShell didn't return a timestamp. Open a Command Prompt and run powershell by itself to confirm it starts correctly, then try this script again."
 )
 
 echo.
